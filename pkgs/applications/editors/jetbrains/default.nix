@@ -349,7 +349,7 @@ rec {
 
             for dir in $out/rider/lib/ReSharperHost/linux-*; do
               rm -rf $dir/dotnet
-              ln -s ${dotnet-sdk}/share/dotnet $dir/dotnet
+              ln -s ${dotnetCorePackages.sdk_10_0}/share/dotnet $dir/dotnet
             done
           '';
       });
